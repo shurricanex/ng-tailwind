@@ -10,8 +10,8 @@
 .anata {
     display: block;
     margin: 0 auto;
-    
-    width: 20rem;
+
+    width: 13rem;
 }
 
 .anata-path {
@@ -33,15 +33,15 @@
         stroke-width: 20;
     stroke-dashoffset: 2600;
   }
-    
+
     14% {
         stroke-width: 20;
     }
-    
+
     15% {
         stroke-width: 40;
     }
-    
+
   100% {
       opacity: 1;
     stroke-dashoffset: 0;
@@ -84,7 +84,7 @@
   0% {
     stroke-dashoffset: 2600;
   }
-    
+
   100% {
     stroke-dashoffset: 0;
   }
