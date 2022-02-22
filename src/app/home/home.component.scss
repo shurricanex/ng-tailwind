@@ -1,0 +1,91 @@
+.logo-container {
+    // display: flex;
+
+    // background: rgb(255, 255, 255);
+    // width: 100%;
+    // height: 100vh;
+
+}
+
+.anata {
+    display: block;
+    margin: 0 auto;
+    
+    width: 20rem;
+}
+
+.anata-path {
+    stroke: #fff;
+}
+
+
+.anata-path--a-1 {
+    stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 40;
+  animation: anata-a-1 1.5s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes anata-a-1 {
+  0% {
+      opacity: 0;
+        stroke-width: 20;
+    stroke-dashoffset: 2600;
+  }
+    
+    14% {
+        stroke-width: 20;
+    }
+    
+    15% {
+        stroke-width: 40;
+    }
+    
+  100% {
+      opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.anata-path--n {
+    stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 40;
+  animation: anata-other-letters 1.5s linear forwards .8s;
+}
+
+
+.anata-path--a-2 {
+    stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 40;
+  animation: anata-other-letters 1.5s linear forwards 1.1s;
+}
+
+
+.anata-path--t {
+    stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 40;
+  animation: anata-other-letters 1.5s linear forwards 1.3s;
+}
+
+
+.anata-path--a-3 {
+    stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 40;
+  animation: anata-other-letters 1.5s linear forwards 1.6s;
+}
+
+@keyframes anata-other-letters {
+  0% {
+    stroke-dashoffset: 2600;
+  }
+    
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
