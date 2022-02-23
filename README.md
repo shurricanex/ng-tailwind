@@ -6,7 +6,7 @@ with the utility-first CSS framework Tailwindcss version 3
 
 ## How To Run 
 
-- npm install (needed on first run)
+- npm install 
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Credits 
