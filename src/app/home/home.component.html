@@ -1,10 +1,10 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white overflow-hidden lg:h-full">
+<div class="relative bg-white overflow-hidden lg:h-full bg-[#ce91fd]">
   <div class="absolute top-4 left-4 w-[14rem] h-[14rem] bg-purple-300 rounded-full " [ngClass]="{'filter blur-xl animate-blob animation-delay-2000': animated}"></div>
   <div class="absolute top-8  right-32 w-[14rem] h-[14rem] bg-pink-300 rounded-full " [ngClass]="{'filter blur-xl animate-blob animation-delay-3000': animated}"></div>
   <div class="absolute bottom-4  left-64 w-[14rem] h-[14rem] bg-blue-300 rounded-full " [ngClass]="{'filter blur-xl animate-blob animation-delay-4000': animated}"></div>
   <div class="absolute left-8 top-16">
-    <div class="logo-container cursor-pointer" (mouseenter)="animated = !animated">
+    <div class="cursor-pointer" (mouseenter)="animated = !animated">
       <svg id="anata" x="0px" y="0px" viewBox="-13.9 130 580.6 391.4" xml:space="preserve" class="anata">
           <defs>
               <clipPath id="clip-a-1">
@@ -56,36 +56,35 @@
               <div class="flex items-center space-x-6 lg:space-x-8">
                 <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                   <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="w-full h-full object-center object-cover">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="img" class="w-full h-full object-center object-cover">
                   </div>
                   <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                </div>
-                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="w-full h-full object-center object-cover">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="img" class="w-full h-full object-center object-cover">
                   </div>
                 </div>
                 <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                   <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="w-full h-full object-center object-cover">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="img" class="w-full h-full object-center object-cover">
                   </div>
                   <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="w-full h-full object-center object-cover">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="img" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="img" class="w-full h-full object-center object-cover">
+                  </div>
+                </div>
+                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="img" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="img" class="w-full h-full object-center object-cover">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <a href="product" class=" bg-indigo-600 border border-transparent  font-medium text-white hover:bg-indigo-700" [ngClass]="[animated ? 'absolute z-20 w-[12rem] h-[12rem] rounded-full flex items-center justify-center text-2xl' : 'rounded-md py-3 px-8 inline-block  text-center']">Shop Collection</a>
+          <a #ball href="product" class=" bg-indigo-600 border border-transparent  font-medium text-white hover:bg-indigo-700" [ngClass]="[animated ? 'absolute z-20 w-[12rem] h-[12rem] rounded-full flex items-center justify-center text-2xl ball' : 'rounded-md py-3 px-8 inline-block  text-center']">Shop Collection</a>
         </div>
       </div>
     </div>
