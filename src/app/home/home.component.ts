@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit {
   ngAfterViewInit(): void {
     this.animate();
     let mouseOverEvent$ = fromEvent<MouseEvent>(document, 'mousemove');
-    mouseOverEvent$.subscribe((event: any)=> {
-      this.mouseX = event.screenX;
-      this.mouseY = event.screenY;
+    mouseOverEvent$.subscribe((event: MouseEvent)=> {
+      this.mouseX = event.pageX;
+      this.mouseY = event.pageY;
     })
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
