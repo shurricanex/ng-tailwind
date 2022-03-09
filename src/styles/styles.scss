@@ -15,5 +15,25 @@
         animation-delay: 4s;
     }
 }
-html, body { height: 100%; }
+html, body { height: 100%;  }
+.app-container {
+    @apply bg-[#ce91fd] dark:bg-[#22272e]
+}
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@layer components {
+    .model-image-wrapper{
+        @apply w-44 h-64 rounded-lg overflow-hidden
+
+    }
+    .model-image {
+        @apply w-full h-full object-center object-cover;
+        }
+    .btn-shop {
+        @apply bg-indigo-600 border border-transparent  font-medium text-white hover:bg-indigo-700;
+    }
+    .block-model-image {
+        @apply flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8;
+    }
+    
+}
