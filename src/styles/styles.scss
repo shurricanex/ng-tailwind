@@ -1,39 +1,46 @@
-
 /* You can add global styles to this file, and also import other style files */
+@import "./theme/custom-material";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
-    .animation-delay-2000 {
-        animation-delay: 2s;
-    }
-    .animation-delay-3000 {
-        animation-delay: 3s;
-    }
-    .animation-delay-4000 {
-        animation-delay: 4s;
-    }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }
-html, body { height: 100%;  }
+html,
+body {
+  height: 100%;
+}
 .app-container {
-    @apply bg-[#ce91fd] dark:bg-[#22272e]
+  @apply bg-[#ce91fd] dark:bg-[#22272e];
 }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @layer components {
-    .model-image-wrapper{
-        @apply w-44 h-64 rounded-lg overflow-hidden
-
-    }
-    .model-image {
-        @apply w-full h-full object-center object-cover;
-        }
-    .btn-shop {
-        @apply bg-indigo-600 border border-transparent  font-medium text-white hover:bg-indigo-700;
-    }
-    .block-model-image {
-        @apply flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8;
-    }
-    
+  .model-image-wrapper {
+    @apply w-44 h-64 rounded-lg overflow-hidden;
+  }
+  .model-image {
+    @apply w-full h-full object-center object-cover;
+  }
+  .btn-shop.mat-flat-button {
+    @apply bg-indigo-600 border border-transparent font-medium text-white hover:bg-indigo-700   py-3 px-8 inline-block  text-center;
+  }
+  .block-model-image {
+    @apply flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8;
+  }
+}
+$sizes: ("sm": 6px, "md": 12px, "lg": 32px);
+@each $name,$size in $sizes {
+  .mat-button-base.rounded-#{$name} {
+    border-radius: $size;
+  }
 }
