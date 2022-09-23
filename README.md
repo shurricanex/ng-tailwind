@@ -9,6 +9,6 @@ with the utility-first CSS framework Tailwindcss version 3
 - npm install 
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Credits 
+## Credit
 
 Anata logo https://medium.com/@anatacreative/handwriting-animation-with-svg-638931410cfa
