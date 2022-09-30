@@ -6,12 +6,13 @@ import { LocalStorageService } from 'src/services/local-storage.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  dark = false;
   public animated = false;
   public theme: any;
-  localStorageEnum = LocalStorage
+  localStorageEnum = LocalStorage;
   @ViewChild('ball') ball!: ElementRef;
   public mouseX = 0;
   public mouseY = 0;
@@ -21,44 +22,43 @@ export class HomeComponent {
 
   public speed = 0.1;
 
-  constructor(private renderer2: Renderer2, private localStorageService: LocalStorageService) { }
-  ngOnInit(): void {
-    
-    
-  }
+  constructor(
+    private renderer2: Renderer2,
+    private localStorageService: LocalStorageService
+  ) {}
+  ngOnInit(): void {}
   animate(): void {
     let distX = this.mouseX - this.ballX;
-	  let distY = this.mouseY - this.ballY;
-	
-	// Find position of ball and some distance * speed
-	  this.ballX = this.ballX + (distX * this.speed);
-	  this.ballY = this.ballY + (distY * this.speed);
+    let distY = this.mouseY - this.ballY;
 
-    this.renderer2.setStyle(this.ball.nativeElement,'left',this.ballX + "px")
-    this.renderer2.setStyle(this.ball.nativeElement,'top',this.ballY + "px")
+    // Find position of ball and some distance * speed
+    this.ballX = this.ballX + distX * this.speed;
+    this.ballY = this.ballY + distY * this.speed;
 
-    window.requestAnimationFrame(this.animate.bind(this))
+    this.renderer2.setStyle(this.ball.nativeElement, 'left', this.ballX + 'px');
+    this.renderer2.setStyle(this.ball.nativeElement, 'top', this.ballY + 'px');
 
+    window.requestAnimationFrame(this.animate.bind(this));
   }
 
   ngAfterViewInit(): void {
     this.animate();
     let mouseOverEvent$ = fromEvent<MouseEvent>(document, 'mousemove');
-    mouseOverEvent$.subscribe((event: MouseEvent)=> {
+    mouseOverEvent$.subscribe((event: MouseEvent) => {
       this.mouseX = event.pageX;
       this.mouseY = event.pageY;
-    })
+    });
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-   
-
   }
 
-  setNightMode(): void{
-    this.localStorageService.set(this.localStorageEnum.theme, 'dark')
+  setNightMode(): void {
+    this.localStorageService.set(this.localStorageEnum.theme, 'dark');
+    this.dark = true;
   }
 
   setLightMode(): void {
-    this.localStorageService.set(this.localStorageEnum.theme, 'light')
+    this.localStorageService.set(this.localStorageEnum.theme, 'light');
+    this.dark = false;
   }
 }
